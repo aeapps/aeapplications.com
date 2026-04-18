@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AE Applications by Accessible Ethical Apps LLC</title>
+  <meta name="description" content="Mobile apps built with care by Accessible Ethical Apps LLC. Thoughtful, accessible applications for Android and iOS.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --color-bg: #FDFAF6;
+      --color-text: #2C2A27;
+      --color-text-muted: #6B6560;
+      --color-accent: #B8602A;
+      --color-accent-light: #D4813F;
+      --color-surface: #FFFFFF;
+      --color-border: #E8E2DA;
+      --color-badge-bg: #EDE8E1;
+      --color-green: #4A7C59;
+      --color-blue: #3D6B8E;
+      --color-warm-gray: #F5F0EA;
+      --font-display: 'DM Serif Display', Georgia, serif;
+      --font-body: 'DM Sans', system-ui, sans-serif;
+      --radius: 12px;
+      --shadow-soft: 0 2px 16px rgba(44, 42, 39, 0.06);
+      --shadow-card: 0 4px 24px rgba(44, 42, 39, 0.08);
+      --max-width: 720px;
+    }
+
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: var(--font-body);
+      background: var(--color-bg);
+      color: var(--color-text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ---- HEADER ---- */
+    .site-header {
+      padding: 2rem 1.5rem 1rem;
+      text-align: center;
+      position: relative;
+    }
+
+    .site-header::after {
+      content: '';
+      display: block;
+      width: 48px;
+      height: 3px;
+      background: var(--color-accent);
+      margin: 1.5rem auto 0;
+      border-radius: 2px;
+    }
+
+    .logo-mark {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 56px;
+      height: 56px;
+      background: var(--color-accent);
+      color: #fff;
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      border-radius: 14px;
+      margin-bottom: 1rem;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .site-title {
+      font-family: var(--font-display);
+      font-size: clamp(1.6rem, 5vw, 2.2rem);
+      font-weight: 400;
+      color: var(--color-text);
+      letter-spacing: -0.01em;
+      line-height: 1.2;
+    }
+
+    .site-title span {
+      color: var(--color-accent);
+    }
+
+    .site-subtitle {
+      font-size: 0.95rem;
+      color: var(--color-text-muted);
+      margin-top: 0.4rem;
+      font-weight: 400;
+    }
+
+    /* ---- MAIN CONTENT ---- */
+    .content {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 1.5rem 1.5rem 3rem;
+    }
+
+    /* ---- MISSION SECTION ---- */
+    .mission {
+      background: var(--color-warm-gray);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      margin-bottom: 2.5rem;
+      border: 1px solid var(--color-border);
+    }
+
+    .mission p {
+      font-size: 1rem;
+      color: var(--color-text);
+      line-height: 1.7;
+    }
+
+    /* ---- SECTION HEADINGS ---- */
+    .section-heading {
+      font-family: var(--font-display);
+      font-size: 1.4rem;
+      font-weight: 400;
+      margin-bottom: 1.25rem;
+      color: var(--color-text);
+    }
+
+    /* ---- APP CARDS ---- */
+    .app-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .app-card {
+      background: var(--color-surface);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      border: 1px solid var(--color-border);
+      box-shadow: var(--shadow-card);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .app-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 32px rgba(44, 42, 39, 0.12);
+    }
+
+    .app-card-header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .app-icon {
+      width: 52px;
+      height: 52px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      flex-shrink: 0;
+      box-shadow: var(--shadow-soft);
+      overflow: hidden;
+    }
+
+    .app-icon img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .app-name {
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      font-weight: 400;
+    }
+
+    .app-tagline {
+      font-size: 0.85rem;
+      color: var(--color-text-muted);
+      margin-top: 0.15rem;
+    }
+
+    .app-description {
+      font-size: 0.95rem;
+      color: var(--color-text);
+      line-height: 1.65;
+      margin-bottom: 1rem;
+    }
+
+    .app-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+
+    .badge {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 500;
+      padding: 0.25rem 0.6rem;
+      border-radius: 6px;
+      background: var(--color-badge-bg);
+      color: var(--color-text-muted);
+    }
+
+    .store-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      margin-top: 0.75rem;
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--color-accent);
+      text-decoration: none;
+      transition: color 0.15s ease;
+    }
+
+    .store-link:hover {
+      color: var(--color-accent-light);
+    }
+
+    .store-link svg {
+      width: 16px;
+      height: 16px;
+      fill: currentColor;
+    }
+
+    /* ---- CONTACT SECTION ---- */
+    .contact {
+      background: var(--color-surface);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      border: 1px solid var(--color-border);
+      text-align: center;
+    }
+
+    .contact p {
+      font-size: 0.95rem;
+      color: var(--color-text-muted);
+      margin-bottom: 0.75rem;
+    }
+
+    .contact-email {
+      display: inline-block;
+      font-family: var(--font-body);
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--color-accent);
+      text-decoration: none;
+      padding: 0.5rem 1.25rem;
+      border: 2px solid var(--color-accent);
+      border-radius: 8px;
+      transition: background 0.2s ease, color 0.2s ease;
+    }
+
+    .contact-email:hover {
+      background: var(--color-accent);
+      color: #fff;
+    }
+
+    /* ---- FOOTER ---- */
+    .site-footer {
+      text-align: center;
+      padding: 2rem 1.5rem;
+      font-size: 0.8rem;
+      color: var(--color-text-muted);
+      border-top: 1px solid var(--color-border);
+      max-width: var(--max-width);
+      margin: 0 auto;
+    }
+
+    .site-footer a {
+      color: var(--color-text-muted);
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+
+    .site-footer a:hover {
+      color: var(--color-accent);
+    }
+
+    .footer-links {
+      margin-top: 0.5rem;
+    }
+
+    .footer-links a + a {
+      margin-left: 1rem;
+    }
+
+    /* ---- RESPONSIVE ---- */
+    @media (min-width: 600px) {
+      .site-header {
+        padding: 3rem 2rem 1.5rem;
+      }
+
+      .content {
+        padding: 2rem 2rem 4rem;
+      }
+
+      .mission {
+        padding: 2rem;
+      }
+
+      .app-card {
+        padding: 2rem;
+      }
+    }
+
+    /* ---- ANIMATIONS ---- */
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(16px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .site-header { animation: fadeUp 0.6s ease both; }
+    .mission { animation: fadeUp 0.6s ease 0.1s both; }
+    .app-card:nth-child(1) { animation: fadeUp 0.5s ease 0.2s both; }
+    .app-card:nth-child(2) { animation: fadeUp 0.5s ease 0.3s both; }
+    .app-card:nth-child(3) { animation: fadeUp 0.5s ease 0.4s both; }
+    .contact { animation: fadeUp 0.5s ease 0.5s both; }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="logo-mark">AE</div>
+    <h1 class="site-title"><span>AE</span> Applications</h1>
+    <p class="site-subtitle">Accessible Ethical Apps LLC</p>
+  </header>
+
+  <main class="content">
+
+    <section class="mission">
+      <p>We build thoughtful mobile apps with a focus on accessibility and ethical design. No dark patterns, no invasive tracking, just useful software made with care.</p>
+    </section>
+
+    <h2 class="section-heading">Our Apps</h2>
+
+    <div class="app-grid">
+
+      <!-- APP 1: Connie Companion -->
+      <article class="app-card">
+        <div class="app-card-header">
+          <div class="app-icon"><img src="connie-icon.png" alt="Connie Companion app icon"></div>
+          <div>
+            <h3 class="app-name">Connie Companion</h3>
+            <p class="app-tagline">A warm AI companion for seniors</p>
+          </div>
+        </div>
+        <p class="app-description">A caring AI companion designed for seniors. Enjoy natural voice conversations, revisit past chats, and keep a personal memory book of meaningful moments, all within a simple, accessible interface.</p>
+        <div class="app-badges">
+          <span class="badge">AI Companion</span>
+          <span class="badge">Voice</span>
+          <span class="badge">Accessibility</span>
+          <span class="badge">Android</span>
+        </div>
+        <a class="store-link" href="https://play.google.com/store/apps/details?id=com.conniecompanion.app&pcampaignid=web_share" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24"><path d="M3 20.5v-17c0-.83.52-1.28 1.23-.95l14.54 8.5c.71.42.71 1.08 0 1.5l-14.54 8.5c-.71.33-1.23-.12-1.23-.95z"/></svg>
+          Google Play
+        </a>
+      </article>
+
+      <!-- APP 2: Fill in The -->
+      <article class="app-card">
+        <div class="app-card-header">
+          <div class="app-icon"><img src="fill-in-the-icon.png" alt="Fill in The app icon"></div>
+          <div>
+            <h3 class="app-name">Fill in The</h3>
+            <p class="app-tagline">Complete the phrase word puzzle</p>
+          </div>
+        </div>
+        <p class="app-description">A word puzzle game where you complete famous phrases by placing letter tiles. Progress through 23 levels of increasing challenge and test your knowledge of well-known sayings.</p>
+        <div class="app-badges">
+          <span class="badge">Word Game</span>
+          <span class="badge">Puzzle</span>
+          <span class="badge">Android</span>
+        </div>
+        <a class="store-link" href="https://play.google.com/store/apps/details?id=com.phrasefinisher.app&pcampaignid=web_share" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24"><path d="M3 20.5v-17c0-.83.52-1.28 1.23-.95l14.54 8.5c.71.42.71 1.08 0 1.5l-14.54 8.5c-.71.33-1.23-.12-1.23-.95z"/></svg>
+          Google Play
+        </a>
+      </article>
+
+    </div>
+
+    <section class="contact">
+      <h2 class="section-heading">Get in Touch</h2>
+      <p>Have questions, feedback, or support inquiries? We'd love to hear from you.</p>
+      <a class="contact-email" href="mailto:accessible.ethical@proton.me">accessible.ethical@proton.me</a>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Accessible Ethical Apps LLC. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
