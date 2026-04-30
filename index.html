@@ -85,7 +85,7 @@
     }
 
     .site-title span {
-      color: var(--color-accent);
+      color: var(--color-text);
     }
 
     .site-subtitle {
@@ -226,6 +226,10 @@
       color: var(--color-accent-light);
     }
 
+    .store-link + .store-link {
+      margin-left: 1.25rem;
+    }
+
     .store-link svg {
       width: 16px;
       height: 16px;
@@ -336,7 +340,6 @@
 <body>
 
   <header class="site-header">
-    <div class="logo-mark">AE</div>
     <h1 class="site-title"><span>AE</span> Applications</h1>
     <p class="site-subtitle">Accessible Ethical Apps LLC</p>
   </header>
@@ -351,29 +354,7 @@
 
     <div class="app-grid">
 
-      <!-- APP 1: Connie Companion -->
-      <article class="app-card">
-        <div class="app-card-header">
-          <div class="app-icon"><img src="connie-icon.png" alt="Connie Companion app icon"></div>
-          <div>
-            <h3 class="app-name">Connie Companion</h3>
-            <p class="app-tagline">A warm AI companion for seniors</p>
-          </div>
-        </div>
-        <p class="app-description">A caring AI companion designed for seniors. Enjoy natural voice conversations, revisit past chats, and keep a personal memory book of meaningful moments, all within a simple, accessible interface.</p>
-        <div class="app-badges">
-          <span class="badge">AI Companion</span>
-          <span class="badge">Voice</span>
-          <span class="badge">Accessibility</span>
-          <span class="badge">Android</span>
-        </div>
-        <a class="store-link" href="https://play.google.com/store/apps/details?id=com.conniecompanion.app&pcampaignid=web_share" target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24"><path d="M3 20.5v-17c0-.83.52-1.28 1.23-.95l14.54 8.5c.71.42.71 1.08 0 1.5l-14.54 8.5c-.71.33-1.23-.12-1.23-.95z"/></svg>
-          Google Play
-        </a>
-      </article>
-
-      <!-- APP 2: Fill in The -->
+      <!-- APP 1: Fill in The -->
       <article class="app-card">
         <div class="app-card-header">
           <div class="app-icon"><img src="fill-in-the-icon.png" alt="Fill in The app icon"></div>
@@ -383,12 +364,27 @@
           </div>
         </div>
         <p class="app-description">A word puzzle game where you complete famous phrases by placing letter tiles. Progress through 23 levels of increasing challenge and test your knowledge of well-known sayings.</p>
-        <div class="app-badges">
-          <span class="badge">Word Game</span>
-          <span class="badge">Puzzle</span>
-          <span class="badge">Android</span>
-        </div>
         <a class="store-link" href="https://play.google.com/store/apps/details?id=com.phrasefinisher.app&pcampaignid=web_share" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24"><path d="M3 20.5v-17c0-.83.52-1.28 1.23-.95l14.54 8.5c.71.42.71 1.08 0 1.5l-14.54 8.5c-.71.33-1.23-.12-1.23-.95z"/></svg>
+          Google Play
+        </a>
+        <a class="store-link" href="https://apps.apple.com/us/app/fill-in-the/id6763822559" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24"><path d="M17.05 12.04c-.03-2.97 2.42-4.39 2.53-4.46-1.38-2.02-3.53-2.3-4.3-2.33-1.83-.18-3.57 1.08-4.5 1.08-.93 0-2.36-1.05-3.88-1.02-2 .03-3.84 1.16-4.87 2.95-2.08 3.6-.53 8.93 1.5 11.85 1 1.43 2.18 3.04 3.74 2.98 1.5-.06 2.07-.97 3.88-.97 1.81 0 2.32.97 3.91.94 1.61-.03 2.63-1.46 3.62-2.9 1.14-1.66 1.61-3.27 1.64-3.36-.04-.02-3.14-1.21-3.17-4.76zM14.13 3.34c.83-1.01 1.39-2.41 1.24-3.81-1.2.05-2.65.8-3.51 1.81-.77.89-1.45 2.32-1.27 3.69 1.34.1 2.71-.68 3.54-1.69z"/></svg>
+          App Store
+        </a>
+      </article>
+
+      <!-- APP 2: Connie Companion -->
+      <article class="app-card">
+        <div class="app-card-header">
+          <div class="app-icon"><img src="connie-icon.png" alt="Connie Companion app icon"></div>
+          <div>
+            <h3 class="app-name">Connie Companion</h3>
+            <p class="app-tagline">A warm AI companion for seniors</p>
+          </div>
+        </div>
+        <p class="app-description">A caring AI companion designed for seniors. Enjoy natural voice conversations, revisit past chats, and keep a personal memory book of meaningful moments, all within a simple, accessible interface.</p>
+        <a class="store-link" href="https://play.google.com/store/apps/details?id=com.conniecompanion.app&pcampaignid=web_share" target="_blank" rel="noopener">
           <svg viewBox="0 0 24 24"><path d="M3 20.5v-17c0-.83.52-1.28 1.23-.95l14.54 8.5c.71.42.71 1.08 0 1.5l-14.54 8.5c-.71.33-1.23-.12-1.23-.95z"/></svg>
           Google Play
         </a>
